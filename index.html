@@ -176,10 +176,11 @@
                      <div class="hero-image-box d-none d-md-inline-block">
                         <img src="assets/img/hero/avatar.jpg" alt="" />
                      </div>
-                  <div class="hero-content-box">
-                  <h1 class="hero-title">
-                     Hi, I am <br />Huy Hoang
-                  </h1>
+                     <div class="hero-content-box">
+                        <h1 class="hero-title">
+                           Hi, I am <br />
+                           <span id="typed-text" style="color: var(--tj-theme-primary);"></span>
+                        </h1>
 
                   <small class="full-name" 
                            onmouseover="this.style.opacity='1';" 
@@ -858,6 +859,26 @@
   });
 </script>
 
+<!-- Nhaychuot effect --->
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+  var typed = new Typed('#typed-text', {
+    // Danh sách các từ bạn muốn gõ rồi xóa
+    strings: [
+        'Huy Hoang', 
+        'a Robotics Engineer', 
+        'an Embedded Engineer',
+    ],
+    typeSpeed: 60,       // Tốc độ gõ chữ (tính bằng mili-giây)
+    backSpeed: 40,       // Tốc độ xóa chữ (nhanh hơn gõ một chút)
+    backDelay: 2000,     // Dừng 2 giây để người dùng đọc trước khi xóa
+    startDelay: 500,     // Dừng 0.5 giây trước khi bắt đầu gõ lần đầu
+    loop: true,          // Lặp lại hiệu ứng vô hạn
+    cursorChar: '|',     // Ký tự con trỏ chuột (bạn có thể đổi thành '_' nếu thích)
+  });
+</script>
 
 </body>
 
